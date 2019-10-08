@@ -4,7 +4,7 @@ import './App.css';
 
 import PictureOfTheDay from './components/picture-of-the-day/PictureOfTheDay.js';
 
-const API_URL = 'http://api.nasa.gov/planetary/apod';
+const API_URL = 'https://api.nasa.gov/planetary/apod';
 const API_KEY = 'DEMO_KEY';
 
 const date = new Date();
