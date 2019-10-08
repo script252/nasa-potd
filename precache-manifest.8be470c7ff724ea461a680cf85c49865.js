@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9990fbca7c64a1bf6fcf00e4e2af0def",
+    "revision": "f106f053dd090ec03dece5606d32aa8e",
     "url": "/nasa-potd/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nasa-potd/static/css/2.bc3aac6f.chunk.css"
   },
   {
-    "revision": "6fe2a72a217959e9ec8e",
+    "revision": "b9b7a941ad43b64a223b",
     "url": "/nasa-potd/static/css/main.b747d286.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nasa-potd/static/js/2.3eeef59d.chunk.js"
   },
   {
-    "revision": "6fe2a72a217959e9ec8e",
-    "url": "/nasa-potd/static/js/main.768aadb6.chunk.js"
+    "revision": "b9b7a941ad43b64a223b",
+    "url": "/nasa-potd/static/js/main.a9bfb69b.chunk.js"
   },
   {
     "revision": "cba5777ec448683e54d8",
