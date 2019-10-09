@@ -26,6 +26,10 @@ function PictureOfTheDay({apiUrl, apiKey, date}) {
         setCurrentDate(newDate);
     }
 
+    const selectDate = (newDate) => {
+        setCurrentDate(newDate);
+    }
+
     const [data, setData] = useState({});
     const [currentDate, setCurrentDate] = useState(date);
     
@@ -62,7 +66,9 @@ function PictureOfTheDay({apiUrl, apiKey, date}) {
                 forwardCallback={nextDay}
                 backCallback={previousDay}
                 latestCallback={latestDay}
+                selectDateCallback={selectDate}
                 forwardVisible={!isLatestDay()}
+                date={currentDate}
             ></NavControls>
         </React.Fragment>
     )
