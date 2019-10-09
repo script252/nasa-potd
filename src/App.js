@@ -1,28 +1,46 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom';
 import './App.css';
 
 import PictureOfTheDay from './components/picture-of-the-day/PictureOfTheDay.js';
 
-const API_URL = 'https://api.nasa.gov/planetary/apod';
-const API_KEY = 'DEMO_KEY';
+function PictureOfTheDayView() {
 
-const date = new Date();
+  const API_URL = 'https://api.nasa.gov/planetary/apod';
+  const API_KEY = 'DEMO_KEY';
+
+  const { year, month, day } = useParams();
+  
+  const getDate = () => {
+    try {
+      return year && month && day ? new Date(year, parseInt(month) - 1, day) : new Date();
+    } catch (error) {
+      return new Date();
+    }
+  }
+
+  return (
+    <PictureOfTheDay
+      apiUrl={API_URL}
+      apiKey={API_KEY}
+      date={getDate()}
+    ></PictureOfTheDay>
+  )
+}
 
 function App() {
+
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      <Route exact path={"/"} render={ () => (
-        <div className="App">
-          <header className="App-header">
-          <PictureOfTheDay
-            apiUrl={API_URL}
-            apiKey={API_KEY}
-            date={date}
-          ></PictureOfTheDay>
-          </header>
-        </div>
-      )} />
+      <Switch>
+        <Route path={"/:year?/:month?/:day?"} render={ () => (
+          <div className="App">
+            <header className="App-header">
+              <PictureOfTheDayView/>
+            </header>
+          </div>
+        )} />
+      </Switch>
     </Router>
   );
 }
