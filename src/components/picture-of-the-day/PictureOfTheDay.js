@@ -1,33 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import ImageArticle from './ImageArticle';
-import NavControls from './NavControls';
 import GetDateString from '../../helpers/dateFormat';
 
 import './PictureOfTheDay.scss';
 
 function PictureOfTheDay({apiUrl, apiKey, date}) {
 
-    const isLatestDay = () => {
-        return currentDate.getDate() === new Date().getDate();
-    }
+    const navCallbacks = {
 
-    const previousDay = () => {
-        const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() - 1);
-        setCurrentDate(newDate);
-    }
+        isLatestDay: () => {
+            return currentDate.getDate() === new Date().getDate();
+        },
 
-    const nextDay = () => {
-        const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + 1);
-        setCurrentDate(newDate);
-    }
-
-    const latestDay = () => {
-        const newDate = new Date();
-        setCurrentDate(newDate);
-    }
-
-    const selectDate = (newDate) => {
-        setCurrentDate(newDate);
+        previousDay: () => {
+            const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() - 1);
+            setCurrentDate(newDate);
+        },
+    
+        nextDay: () => {
+            const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + 1);
+            setCurrentDate(newDate);
+        },
+    
+        latestDay: () => {
+            const newDate = new Date();
+            setCurrentDate(newDate);
+        },
+    
+        selectDate: (newDate) => {
+            setCurrentDate(newDate);
+        }
     }
 
     const [data, setData] = useState({});
@@ -60,16 +62,10 @@ function PictureOfTheDay({apiUrl, apiKey, date}) {
                 imageUrl={data.url}
                 title={data.title}
                 subTitle={GetDateString(currentDate)}
+                callbacks={navCallbacks}
+                date={currentDate}
             >
             </ImageArticle>
-            <NavControls
-                forwardCallback={nextDay}
-                backCallback={previousDay}
-                latestCallback={latestDay}
-                selectDateCallback={selectDate}
-                forwardVisible={!isLatestDay()}
-                date={currentDate}
-            ></NavControls>
         </React.Fragment>
     )
 }
