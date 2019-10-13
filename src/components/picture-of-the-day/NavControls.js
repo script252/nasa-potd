@@ -22,7 +22,7 @@ function NavControls({forwardCallback, backCallback, latestCallback, selectDateC
     const [calendarVisible, setCalendarVisible] = useState(false);
 
     return (
-        <div class="nav-controls">
+        <div className="nav-controls">
             <button type="button" className="button-back" onClick={backCallback}>Previous</button>
             <div style={forwardVisible ? visibleStyle : hiddenStyle}>
                 <button type="button" className="button-forward" onClick={forwardCallback}>Next</button>
