@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/nasa-potd/static/css/main.fe459e2f.chunk.css",
+    "main.css": "/nasa-potd/static/css/main.448dc231.chunk.css",
     "main.js": "/nasa-potd/static/js/main.012deffa.chunk.js",
     "main.js.map": "/nasa-potd/static/js/main.012deffa.chunk.js.map",
     "runtime-main.js": "/nasa-potd/static/js/runtime-main.180f5bea.js",
@@ -9,18 +9,18 @@
     "static/js/2.16f2f5e9.chunk.js": "/nasa-potd/static/js/2.16f2f5e9.chunk.js",
     "static/js/2.16f2f5e9.chunk.js.map": "/nasa-potd/static/js/2.16f2f5e9.chunk.js.map",
     "index.html": "/nasa-potd/index.html",
-    "precache-manifest.672b15612aa88bf2cdda890399351c1c.js": "/nasa-potd/precache-manifest.672b15612aa88bf2cdda890399351c1c.js",
+    "precache-manifest.4a9d50e4edc9bda737217961257ebc0e.js": "/nasa-potd/precache-manifest.4a9d50e4edc9bda737217961257ebc0e.js",
     "service-worker.js": "/nasa-potd/service-worker.js",
     "static/css/2.267b0aaf.chunk.css.map": "/nasa-potd/static/css/2.267b0aaf.chunk.css.map",
-    "static/css/main.fe459e2f.chunk.css.map": "/nasa-potd/static/css/main.fe459e2f.chunk.css.map",
-    "static/media/NavControls.scss": "/nasa-potd/static/media/calendar-regular.17efa687.svg",
+    "static/css/main.448dc231.chunk.css.map": "/nasa-potd/static/css/main.448dc231.chunk.css.map",
+    "static/media/NavControls.scss": "/nasa-potd/static/media/skip-forward.2e5c16df.svg",
     "static/media/App.css": "/nasa-potd/static/media/stars.01adf5d3.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.180f5bea.js",
     "static/css/2.267b0aaf.chunk.css",
     "static/js/2.16f2f5e9.chunk.js",
-    "static/css/main.fe459e2f.chunk.css",
+    "static/css/main.448dc231.chunk.css",
     "static/js/main.012deffa.chunk.js"
   ]
 }
