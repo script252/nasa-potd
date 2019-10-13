@@ -9,7 +9,7 @@
 }
 
 article h1 {
-    font-size: calc(20px + 3vmin);
+    font-size: calc(20px + 2vmin);
     font-weight: 100;
     letter-spacing: 0.5vmin;
 
@@ -17,6 +17,7 @@ article h1 {
     text-align: left;
 
     text-transform: uppercase;
+    overflow-wrap: break-word;
 }
 
 article h2 {
@@ -29,11 +30,11 @@ article h2 {
 }
 
 article p {
-    font-size: calc(1px + 1.4vmin);
+    font-size: 12px;
     font-weight: 300;
 
     color: white;
     text-align: left;
     margin-left: span 1;
-    line-height: 3.4vmin;
+    line-height: 1.6em;
 }
