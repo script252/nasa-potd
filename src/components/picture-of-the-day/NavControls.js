@@ -22,7 +22,7 @@ function NavControls({forwardCallback, backCallback, latestCallback, selectDateC
     const [calendarVisible, setCalendarVisible] = useState(false);
 
     return (
-        <React.Fragment>
+        <div class="nav-controls">
             <button type="button" className="button-back" onClick={backCallback}>Previous</button>
             <div style={forwardVisible ? visibleStyle : hiddenStyle}>
                 <button type="button" className="button-forward" onClick={forwardCallback}>Next</button>
@@ -32,7 +32,7 @@ function NavControls({forwardCallback, backCallback, latestCallback, selectDateC
             <div style={calendarVisible ? visibleStyle : hiddenStyle}>
                 <Calendar {...calendarProps}/>
             </div>
-        </React.Fragment>
+        </div>
     )
 }
 

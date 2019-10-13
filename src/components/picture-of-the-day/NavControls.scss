@@ -1,0 +1,33 @@
+.nav-controls{
+    grid-column: 1 / span 5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-back, .button-forward, .button-latest, .button-calendar{
+    width: 16px;
+    height: 16px;
+
+    font-size: 0;
+    filter: invert(100%);
+
+    display: inline-block;
+}
+
+.button-back{
+    background: url(svg/_ionicons_svg_md-play.svg);
+    transform: scaleX(-1);
+}
+
+.button-forward{
+    background: url(svg/_ionicons_svg_md-play.svg);
+}
+
+.button-latest{
+    background: url(svg/_ionicons_svg_md-skip-forward.svg);
+}
+
+.button-calendar{
+    background: url(svg/calendar-regular.svg);
+    background-repeat: no-repeat;
+}
