@@ -1,3 +1,7 @@
-.PictureOfTheDay {
-    column-count: 2;
+article{
+    /* grid */
+display: grid;
+height: 100%;
+grid-template-columns: repeat(16, 1fr);
+grid-template-rows: 1fr 16px;
 }

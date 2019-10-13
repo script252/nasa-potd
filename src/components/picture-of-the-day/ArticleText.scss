@@ -1,21 +1,39 @@
 .article-text {
     display: inline-block;
+    grid-column: 1 / span 5;
+    grid-row: 1;
+}
+
+.article-text *{
+    margin-bottom: 2.8vmin;
 }
 
 article h1 {
-    font-size: calc(20px + 2vmin);
+    font-size: calc(20px + 3vmin);
+    font-weight: 100;
+    letter-spacing: 0.5vmin;
+
     color: white;
     text-align: left;
+
+    text-transform: uppercase;
 }
 
 article h2 {
-    font-size: calc(5px + 2vmin);
+    font-size: calc(5px + 1vmin);
+    font-weight: 100;
+    letter-spacing: 0.5vmin;
     color: white;
     text-align: left;
+    text-transform: uppercase;
 }
 
 article p {
-    font-size: calc(1px + 2vmin);
+    font-size: calc(1px + 1.4vmin);
+    font-weight: 300;
+
     color: white;
     text-align: left;
+    margin-left: span 1;
+    line-height: 3.4vmin;
 }
