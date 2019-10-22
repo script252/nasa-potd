@@ -1,13 +1,80 @@
 .image-preview {
-    grid-column: 7 / span 10;
-    grid-row: span 2;
+    grid-column: span 16;
+    // grid-row: span 2;
+    order: 1;
 }
-
+.image-preview a{
+    display: inline-block;
+    // height: calc(100vh - 16px - 16vmin);
+    max-width: 100%;
+    
+}
 .image {
-    height: 100%;
-    width: 100%;
+    display: block;
     object-fit: contain;
-    filter: drop-shadow(0 10px 40px #000000);
-    object-position: 0 0;
+    width: auto;
+    height: calc(100vh - 16px - 16vmin);
+    max-width: 100%;
+    max-height: 100%;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.8));
+    // object-position: 50% 0;
+
+    -webkit-animation: fadein topdown 6s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 6s; /* Firefox < 16 */
+    -ms-animation: fadein 6s; /* Internet Explorer */
+    -o-animation: fadein 6s; /* Opera < 12.1 */
+    animation: fadein 5s, topdown 3s;
 }
 
+// for small screens
+@media (max-width: 750px){
+    .image-preview{
+        grid-column: span 16;
+        width: 100vw;
+        
+        left: 0;
+        order: 0;
+    }
+
+    .image{
+        object-position: 0 0;
+        height: auto;
+        max-height: 100%;
+    }
+}
+
+/* fadein animation */
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* topdown animation */
+@keyframes topdown {
+    from { transform: translateY(5%); }
+    to   { transform: translateY(0); }
+}
