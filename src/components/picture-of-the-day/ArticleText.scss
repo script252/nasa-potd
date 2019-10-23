@@ -12,11 +12,18 @@
     backdrop-filter: blur(10px);  
 
     transition: all 1s cubic-bezier(.82, .1, .11, 1.12);
-    &:hover{
+
+}
+
+.article-text.opened{
+    content: "Hide Caption";
+    right: 0;
+
+    &.article-text:before{
         content: "Hide Caption";
-        right: 0;
     }
 }
+
 .article-text:before {
     content: "Show Caption";
     background: transparent;
@@ -85,13 +92,16 @@ article p {
         top: 100%;
         right: 0;
         left: 0;
+    }
 
-
-        &:hover{
+    .article-text.opened{
+        top: 64px;
+        
+        &.article-text:before{
             content: "Hide Caption";
-            top: 64px;
         }
     }
+
     .article-text:before{
         writing-mode: horizontal-tb;
         text-orientation: initial;
