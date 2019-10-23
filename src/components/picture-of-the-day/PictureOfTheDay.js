@@ -34,7 +34,7 @@ function PictureOfTheDay({apiUrl, apiKey, date}) {
 
     const [data, setData] = useState({});
     const [currentDate, setCurrentDate] = useState(date);
-    
+
     useEffect(() => {
 
         async function fetchData() {
@@ -45,14 +45,17 @@ function PictureOfTheDay({apiUrl, apiKey, date}) {
             const dateString = `${yearString}-${monthString}-${dayString}`;
             const fetchUrl = `${apiUrl}?api_key=${apiKey}&date=${dateString}`;
             const response = await fetch(fetchUrl);
+
             const json = await response.json();
             setData(json);
         }
 
         fetchData();
 
+        return () => {};
+
     }, [apiUrl, apiKey, date, currentDate]);
-    
+
     return (
         <React.Fragment>
             <ImageArticle 
