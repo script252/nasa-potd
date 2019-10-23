@@ -7,7 +7,7 @@ import PictureOfTheDay from './components/picture-of-the-day/PictureOfTheDay.js'
 function PictureOfTheDayView() {
 
   const API_URL = 'https://api.nasa.gov/planetary/apod';
-  const API_KEY = 'DEMO_KEY';
+  const API_KEY = '7Oy3skkb7PPulma2uvezaoJqkQhWjX2XTimm71Kv';
 
   const { year, month, day } = useParams();
   
